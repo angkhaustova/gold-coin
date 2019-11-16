@@ -1,0 +1,56 @@
+@mixin text($font-size, $line-height, $font-weight: 500) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin title($font-size, $line-height, $font-weight: 700) {
+  font-family: "Comfortaa", cursive;
+  @include text($font-size, $line-height, $font-weight);
+}
+
+@mixin basic-text($font-weight: 500) {
+  @include text(16px, 24px, $font-weight);
+}
+
+@mixin optional-text($font-weight: 500) {
+  @include text(12px, 16px, $font-weight);
+}
+
+.title {
+  &--xl {
+    @include title(36px, 48px, 500);
+  }
+
+  &--l {
+    @include title(30px, 40px);
+  }
+
+  &--m {
+    @include title(24px, 32px);
+  }
+
+  &--s {
+    @include title(20px, 28px);
+  }
+
+  &--xs {
+    @include title(16px, 20px, 500);
+  }
+}
+
+h1 {
+  @extend .title--l;
+}
+
+h2 {
+  @extend .title--m;
+}
+
+h3 {
+  @extend .title--s;
+}
+
+h4 {
+  @extend .title--xs;
+}

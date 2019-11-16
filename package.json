@@ -1,0 +1,31 @@
+{
+  "name": "gold-coin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angkhaustova/gold-coin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angkhaustova/gold-coin/issues"
+  },
+  "homepage": "https://github.com/angkhaustova/gold-coin#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.1",
+    "choices.js": "^9.0.0",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.4.1",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {
+    "sass": "^1.23.3"
+  }
+}

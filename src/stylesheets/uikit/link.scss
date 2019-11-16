@@ -1,0 +1,17 @@
+@mixin link {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  text-decoration-line: underline;
+  color: #3440db;
+
+  &:hover {
+    color: #006bff;
+  }
+}
+
+a,
+.link {
+  @include link;
+}
