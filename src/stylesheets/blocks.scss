@@ -1,3 +1,25 @@
+.b-menu {
+  &__item {
+    display: inline-block;
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #323539;
+    }
+  }
+}
+
 .b-finding {
   max-width: 304px;
 
@@ -40,11 +62,72 @@
 }
 
 .b-steps {
+  @media screen and (min-width: 680px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+    height: 880px;
+    max-width: 1024px;
+    margin: auto;
+  }
+
   &__step {
     margin-bottom: 64px;
 
+    @media screen and (min-width: 680px) {
+      width: calc((100% - 64px) / 2);
+      display: inline-block;
+      margin-right: 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      position: relative;
+      width: calc((100% - 104px) / 3);
+    }
+
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      @media screen and (min-width: 1024px) {
+        top: 154px;
+      }
+    }
+
+    &:nth-child(3) {
+      @media screen and (min-width: 1024px) {
+        width: 252px;
+        right: 34px;
+      }
+    }
+
+    &:nth-child(4) {
+      @media screen and (min-width: 1024px) {
+        left: 324px;
+        top: 174px;
+      }
+    }
+
+    &:nth-child(5) {
+      @media screen and (min-width: 1024px) {
+        top: 330px;
+        right: 324px;
+        width: 200px;
+      }
+    }
+
+    &:nth-child(6) {
+      @media screen and (min-width: 1024px) {
+        top: 484px;
+        left: 55px;
+        width: 250px;
+      }
     }
   }
 }
@@ -58,6 +141,10 @@
 
   &__text {
     @extend .title--m;
+
+    @media screen and (min-width: 1024px) {
+      @include title(20px, 28px);
+    }
   }
 }
 
@@ -68,10 +155,60 @@
 
   padding: 0;
 
+  @media screen and (min-width: 680px) {
+    justify-content: center;
+  }
+
   &__city {
     margin-right: 24px;
     margin-bottom: 16px;
     list-style: none;
     color: #323539;
+
+    @media screen and (min-width: 680px) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
   }
+}
+
+// /**
+//  * (optional) define here the style definitions which should be applied on the slider container
+//  * e.g. width including further controls like arrows etc.
+//  */
+// .slider {
+// }
+
+// .frame {
+//   /**
+//      * (optional) wrapper width, specifies width of the slider frame.
+//      */
+//   width: 880px;
+
+//   position: relative;
+//   font-size: 0;
+//   line-height: 0;
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+
+// .slides {
+//   display: inline-block;
+// }
+
+// li {
+//   position: relative;
+//   display: inline-block;
+
+//   /**
+//      * (optional) if the content inside the slide element has a defined size.
+//      */
+//   width: 880px;
+// }
+
+.owl-stage-outer {
+  padding: 32px;
+  position: relative;
+  right: 32px;
+  width: calc(100% + 64px);
 }

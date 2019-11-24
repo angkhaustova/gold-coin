@@ -19,8 +19,9 @@
   "homepage": "https://github.com/angkhaustova/gold-coin#readme",
   "dependencies": {
     "autoprefixer": "^9.7.1",
-    "choices.js": "^9.0.0",
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.4.1",
     "prettier": "^1.19.1"

@@ -1,3 +1,10 @@
+/* stylesheets.f5a5c9f0.css | http://localhost:1234/stylesheets.f5a5c9f0.css */
+
+// .s-header__logo {
+//   /* display: block; */
+//   display: inline-block;
+// }
+
 .s-header {
   padding: 24px 32px;
   background: #ffffff;
@@ -9,9 +16,70 @@
       0px 4px 8px rgba(0, 0, 0, 0.25);
   }
 
+  &__logo-container {
+    display: block;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__inner {
+    @media screen and (min-width: 680px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 960px;
+      width: 100%;
+      margin: auto;
+    }
+  }
+
   &__logo {
     display: block;
     margin: auto;
+
+    @media screen and (min-width: 1024px) {
+      margin: 0 48px 0;
+    }
+  }
+
+  &__buttons {
+    display: none;
+
+    @media screen and (min-width: 680px) {
+      display: block;
+    }
+  }
+
+  &__login {
+    margin-right: 12px;
+    background: none;
+    box-shadow: none;
+    color: #ff6b00;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+      box-shadow: none;
+      color: #ff862e;
+    }
   }
 }
 
@@ -29,6 +97,11 @@
     margin-top: 0;
     margin-bottom: 32px;
     color: #ffffff;
+
+    @media screen and (min-width: 1024px) {
+      max-width: 485px;
+      margin: 0 auto 32px;
+    }
   }
 
   &__text {
@@ -39,16 +112,33 @@
 
     font-weight: 500;
     color: #ffffff;
+
+    @media screen and (min-width: 1024px) {
+      max-width: 363px;
+      margin: 0 auto 32px;
+    }
   }
 
   &__btn {
     width: 100%;
     max-width: 222px;
   }
+
+  &__inner {
+    @media screen and (min-width: 680px) {
+      max-width: 312px;
+      margin: auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 100%;
+    }
+  }
 }
 
 .s-findings {
   padding: 64px 32px;
+  // overflow: hidden;
 
   &__title {
     @extend .title--l;
@@ -56,20 +146,38 @@
     font-weight: 500;
     text-align: center;
   }
+
+  &__finding {
+    display: inline-block;
+  }
 }
 
 .s-how-to {
   padding: 0 32px;
+
+  @media screen and (min-width: 1024px) {
+    background: url("../images/s-how-to/bg.svg") no-repeat center center;
+  }
 
   &__title {
     @extend .title--l;
     margin-bottom: 72px;
     font-weight: 500;
     text-align: center;
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 120px;
+    }
   }
 
   &__steps {
     margin-bottom: 80px;
+
+    @media screen and (min-width: 1024px) {
+      position: relative;
+      width: calc(100% - 48px);
+      left: 48px;
+    }
   }
 }
 
@@ -79,37 +187,96 @@
   margin-bottom: 96px;
   text-align: center;
 
+  @media screen and (min-width: 680px) {
+    text-align: left;
+
+    background: url("../images/s-how-to/treasure.svg") no-repeat center 63%,
+      url("../images/s-how-to/line.svg") no-repeat 80% top;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background: none;
+    text-align: center;
+  }
+
   &__icon {
     display: block;
     margin: 0 auto 24px;
+
+    @media screen and (min-width: 680px) {
+      margin: 0 0 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__title {
     margin-bottom: 32px;
+
+    @media screen and (min-width: 680px) {
+      max-width: 190px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
   }
 
   &__btn {
     width: 100%;
     max-width: 222px;
+
+    @media screen and (min-width: 1024px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
 .s-geography {
   padding: 0 24px 96px;
 
+  @media screen and (min-width: 680px) {
+    padding-bottom: 128px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 653px;
+    margin: auto;
+  }
+
   &__title {
     @extend .title--l;
-    margin-bottom: 72px;
+    display: block;
+    margin-bottom: 48px;
     font-weight: 500;
     text-align: center;
+
+    @media screen and (min-width: 680px) {
+      margin-bottom: 56px;
+    }
   }
 
   &__cities {
     margin-bottom: 16px;
+
+    @media screen and (min-width: 680px) {
+      margin-bottom: 48px;
+    }
   }
 
   &__image {
     display: block;
     width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      max-width: 553px;
+      margin: auto;
+    }
   }
 }
