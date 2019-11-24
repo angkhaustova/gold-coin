@@ -30,8 +30,10 @@
           </ul>
         </nav>
         <div class="s-header__buttons">
-          <button class="s-header__login">Войти</button>
-          <button class="s-header__register">Зарегистрироваться</button>
+          <button class="s-header__login" data-open-modal="login">Войти</button>
+          <button class="s-header__register" data-open-modal="register">
+            Зарегистрироваться
+          </button>
         </div>
       </div>
     </header>
@@ -43,7 +45,9 @@
         <p class="s-promo__text">
           Твои новые впечатления вместо старых экскурсий
         </p>
-        <button class="s-promo__btn">Зарегистрироваться</button>
+        <button class="s-promo__btn" data-open-modal="register">
+          Зарегистрироваться
+        </button>
       </div>
     </section>
     <section class="s-findings">
@@ -263,12 +267,103 @@
           </ul>
         </nav>
         <div class="s-header__buttons">
-          <button class="s-header__login">Войти</button>
-          <button class="s-header__register">Зарегистрироваться</button>
+          <button class="s-header__login" data-open-modal="login">Войти</button>
+          <button class="s-header__register" data-open-modal="register">
+            Зарегистрироваться
+          </button>
         </div>
       </div>
     </footer>
 
+    <div class="b-modal-container" data-modal="register">
+      <div class="b-modal b-modal-register">
+        <header class="b-modal__header">
+          <h2 class="b-modal__title">Регистрация</h2>
+          <button class="b-modal__close">
+            <img src="./images/close.svg" alt="Закрыть" />
+          </button>
+        </header>
+        <form
+          action="/"
+          method="POST"
+          class="b-modal-register__form b-modal__form b-form"
+        >
+          <div class="b-form__field b-field">
+            <label for="register-email" class="b-field__label">Email</label
+            ><input
+              type="email"
+              placeholder="Введите email"
+              class="b-field__input"
+              id="register-email"
+              required
+            />
+          </div>
+          <div class="b-form__field b-form__field--last b-field">
+            <label for="register-password" class="b-field__label">Пароль</label
+            ><input
+              type="password"
+              placeholder="Введите пароль"
+              class="b-field__input"
+              id="register-password"
+              required
+            />
+          </div>
+          <button class="b-form__submit-btn">Зарегистрироваться</button>
+        </form>
+        <p class="b-modal-register__social">
+          Регистрация через соц. сети
+          <button class="link">
+            <img src="./images/vk.svg" alt="VK" />
+          </button>
+          <button class="link">
+            <img src="./images/facebook.svg" alt="f" />
+          </button>
+        </p>
+      </div>
+    </div>
+    <div class="b-modal-container" data-modal="login">
+      <div class="b-modal b-modal-login">
+        <header class="b-modal__header">
+          <h2 class="b-modal__title">Вход</h2>
+          <button class="b-modal__close">
+            <img src="./images/close.svg" alt="Закрыть" />
+          </button>
+        </header>
+        <form
+          action="/"
+          method="POST"
+          class="b-modal-login__form b-modal__form b-form"
+        >
+          <div class="b-form__field b-field">
+            <label for="login-email" class="b-field__label">Email</label
+            ><input
+              type="email"
+              placeholder="Введите email"
+              class="b-field__input"
+              id="login-email"
+              required
+            />
+          </div>
+          <div class="b-form__field b-form__field--last b-field">
+            <label for="login-password" class="b-field__label">Пароль</label
+            ><input
+              type="password"
+              placeholder="Введите пароль"
+              class="b-field__input"
+              id="login-password"
+              required
+            />
+          </div>
+          <a href="/profile" class="b-form__submit-btn">Войти</a>
+        </form>
+        <p class="b-modal-login__register">
+          Если еще не зарегистрированы
+          <button class="link" data-open-modal="register">
+            Зарегистрироваться
+          </button>
+        </p>
+      </div>
+    </div>
     <script src="./scripts/jquery.js"></script>
     <!-- <script src="../node_modules/jquery/dist/jquery.js"></script> -->
     <!-- <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script> -->

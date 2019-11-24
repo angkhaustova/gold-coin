@@ -3,11 +3,20 @@
   -moz-appearance: none;
   -webkit-appearance: none;
 
+  padding: 0;
+
+  background: none;
+  box-shadow: none;
+
   text-decoration-line: underline;
   color: #3440db;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: #006bff;
+    background: none;
+    box-shadow: none;
   }
 }
 
