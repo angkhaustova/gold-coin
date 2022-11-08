@@ -23,7 +23,7 @@
     "normalize.css": "^8.0.1",
     "owl.carousel": "^2.3.4",
     "parcel-bundler": "^1.12.4",
-    "postcss-modules": "^1.4.1",
+    "postcss-modules": "^1.5.0",
     "prettier": "^1.19.1"
   },
   "devDependencies": {
